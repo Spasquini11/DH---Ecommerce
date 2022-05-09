@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>  
+    <%- include('./partials/header') %>  
+
+
+    <div class="banner-psc">    
+        <img src="images/1955-chuck-taylor-all-star-1594222823.jpg" alt="Banner">
+    </div>    
+    <main class="main">
+        <div class="container">
+            <section class="container-products">
+              
+            <div class="product">
+                <% for (let i =0; i< products.length; i++){ %>
+                <div class="card-product">
+                <a href="/products/<%= products[i].id %>" rel="noopener noreferrer">   
+                    <article>                                     
+                         <img src="/images/<%= products[i].image1 %>" alt="Zapatillas" >
+                            <div class="main-article">
+                                <i class="fas fa-truck"></i>
+                                <p class="price"><strong>$ <%= products[i].price %></strong></p>
+                                <p class="discount" style="color: blue"><strong> <%= products[i].discount %> %</strong>  </p>
+                                <h4 class="name"> <%= products[i].name %></h4>
+                            </div>
+                        </article>  
+                    </a>
+                <a href="/detail" rel="noopener noreferrer">    
+                <i class="product__icon fas fa-cart-plus"></i>
+                </a>
+               </div>
+                <% } %>                                
+            </div> 
+
+        </section>
+       
+        <section class="container__testimonial">
+            <h3 class="section__title">La historia detás del éxtio</h3>
+            <h4 class="testimonial__tittle">All Star de Converse</h4>
+            <p class="testimonial__txt">"Sus más de 100 años de historia nos sirven para afirmar que estas deportivas de lona con suela de goma son inmortales." </p>
+        </section>
+            <section class="container-tips">
+
+            <div class="tip">
+                <i class="far fa-credit-card"></i>
+
+                <h3 class="tip__tittle">Elegí cómo pagar</h3>
+                <p class="tip__txt">Podés pagar con tarjeta, débito o hasta 12 cuotas con dCompras Cash !! </p>
+                <a href="" class="btn-shop">COMPRAR</a>
+            </div>
+            <div class="tip">
+                <i class="fas fa-shipping-fast"></i>
+                <h3 class="tip__tittle">Envíos Gratis desde $14.900</h3>
+                <p class="tip__txt">Solo por estar registrado en dCompras, tenés envíos gratis en un centenar de productos.</p>
+                <a href="" class="btn-shop">COMPRAR</a>
+            </div>
+            <div class="tip">
+                <i class="fas fa-shield-alt"></i>
+                <h3 class="tip__tittle">Seguridad</h3>
+                <p class="tip__txt">Envíos garantizados, sino te gusta ... Devolvelo !!.</p>
+                <a href="" class="btn-shop">COMPRAR</a>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript"></script>
+
+    <%- include('./partials/footer') %>
+    </body>
+</html>

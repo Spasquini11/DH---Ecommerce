@@ -1,0 +1,173 @@
+<header>      
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand mt-2 mt-lg-0" href="/">
+          <img
+            src="/images/logo-dCompras-01.svg"
+            src="/logo-dCompras-01.svg" 
+            height="65"
+            alt="dCompras Logo"
+            loading="lazy"
+          />
+        </a>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+        </ul>
+    <form action="/products/search" class="d-flex input-group w-auto" method="GET">
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+              name="name"
+              id="name"
+            />          
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </form> 
+      </div>
+
+      <div class="d-flex align-items-center">
+
+        </div> 
+      </div>
+     
+    </div>
+    
+  </nav>  
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="container">    
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/products">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products/sale">Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products/create">Crear producto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/help">Ayuda</a>
+          </li>
+        </ul>
+    
+      </div>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      </div>
+   
+      <div class="d-flex align-items-center">
+        <a class="text-reset me-3" href="/products/cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+  
+        <div class="dropdown">
+          <a
+            class="text-reset me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li>
+              <a class="dropdown-item" href="#">Notificaciones</a>
+            </li>
+        
+        <div class="dropdown">
+            <% if (locals.isLogged) { %>
+              <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+            <img
+              src="/images/users/<%= locals.userLogged.image %>"
+              class="rounded-circle"
+              height="25"
+              alt="Black and White Portrait of a Man"
+              loading="lazy"
+            />
+               |  Hola  <%= locals.userLogged.first_name %>  
+          </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuAvatar"
+            >
+              <li>
+                <a class="dropdown-item" href="/usrs/<%= locals.userLogged.id %>">Perfil</a>
+              </li> 
+              <li>
+                <a class="dropdown-item" href="/usrs/logout">Logout</a>
+              </li>           
+            </ul>
+      
+        <% } else { %> 
+
+            </div>
+                <div class="d-flex align-items-center">
+                    <a href="/usrs/login"  class="btn btn-link px-3 me-2"> Iniciar Sesión</a>            
+                    <a href="/usrs/create"  class="btn btn-primary me-3">Registrarse</a>
+                    
+                </div> 
+            </div> 
+            <% } %>
+      </div>
+  
+    </div>
+
+  </nav>
+
+</header>

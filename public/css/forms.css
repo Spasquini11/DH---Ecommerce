@@ -1,0 +1,269 @@
+
+.login-container{
+    display: flex;
+    margin: 20px 20px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 0px #12af9a;
+}
+.subConteiner{
+  display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-content: space-between;
+   align-items: baseline;
+}
+.register, .login{
+    flex: 1; 
+}
+.register{
+    padding: 40px;
+    position: relative;
+}
+.register h2{
+    font-size: 24px;
+    font-weight: 900;
+    color: #797979;
+    margin-bottom: 15px;
+}
+.register h3{
+  display: inline;  
+  font-size: 18px;
+  text-align: center;
+  color: #797979;
+  margin-top: 15px;
+}
+.register input{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 35px;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
+}
+
+
+.register input:active,
+.register input:focus{
+    outline: none;
+}
+.register .submit,
+.register-1 .submit{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: 0;
+    background-color: #12af9a;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+.register .submit:hover {
+  font-size:18px;    
+}
+.register a{
+    color: blue;
+    font-weight: bold;
+    display: flex; 
+    justify-content: space-around;
+    margin-bottom: 20px;
+        
+}
+
+.login{
+    background-image: linear-gradient(to bottom right, #36d4d4, #12af9a);
+    padding: 40px;    
+}
+.login h2{
+    text-align: center;
+    color: #fff;
+    margin-top:15px;
+    margin-bottom: 20px;      
+} 
+.login button{
+    position: relative;
+    width: 100%;
+    margin: 22px 0px;
+    padding: 12px;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,.5);
+    cursor: pointer;    
+}
+.login button i{
+    position: absolute;
+    top: 14px;
+    left: 12px;
+}
+.login .fb{
+    font-size: 18px;
+    background-color: #3b5999;
+    border-style: none;
+    color: #fff;
+}
+.login .fb:hover {
+  font-size:22px;    
+}
+.login .tw{
+    font-size: 18px;
+    background-color: #55acef;
+    border-style: none;
+    color: #fff;
+}
+.login .tw:hover {
+  font-size:22px;    
+}
+.login .gmail{
+    font-size: 18px;
+    background-color: #33d4ce;
+    border-style: none;
+    color: #fff;
+}
+.login .gmail:hover {
+  font-size:22px;    
+}
+.login-items a{
+  font-size: larger; 
+  font-weight: bolder; 
+  color: #fff; 
+  text-decoration: none;
+  display: flex; 
+  justify-content: space-around;    
+  margin-top: 5px;         
+}
+.login-items a:hover {
+  font-size:22px;
+  color:#100;
+}
+
+
+.register-1, .register-2{
+  flex: 1; 
+}
+.register-1{
+  padding: 40px;
+  position: relative;
+}
+.register-1 h2{
+  color: #797979;
+  margin-bottom: 30px;
+}
+.register-1 input{
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+}
+
+.register-1 input:active,
+.register-1 input:focus{
+  outline: none;
+}
+.register-2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.register-2 h2{
+  color: #797979;
+  margin-bottom: 30px;
+}
+.register-2 input{
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+}
+
+.register-2 input:active, */
+.register-2 input:focus{
+  outline: none;
+}
+.register-2 .submit{    
+  position: absolute;
+  width: 60%;
+  top: 82%;
+  left: -90px;
+  padding: 15px;
+  text-align: center;    
+  font-size: 14px;
+  font-weight: 500;    
+  background-color: #12af9a;
+  color: #fff;    
+  box-shadow: 1px 1px 10px 0px rgba(0,0,0,.5);
+  transform: translateY(20%);
+  cursor: pointer;
+}
+.register-2 .submit:hover {
+  padding:16px;
+  font-size:16px;
+}
+.is-valid {
+  color: #198754;
+}
+.is-invalid {
+  color: #842029;
+}    
+.alert-warning{
+  color:#842029;
+  background-color: #F8D7DA;
+  text-align: center;
+  border-radius: 10px;
+}   
+
+
+@media only screen and (max-width: 768px){
+    .login-container{
+      display: block;
+      position: relative;
+      top: 40%;          
+    }
+    .register,
+    .login{
+        flex: none;                 
+    }
+    .register::after{
+        top: unset;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+    }
+    h2{
+        font-size: 1px;
+    }
+    .register-1,
+    .register-2{
+        padding: 0 45px;
+        flex: none;
+    }
+    .register-1{
+        padding-top: 25px;
+    }
+    .register-2{
+        padding-bottom: 25px;
+    }
+    .register-2 .submit{
+        top: unset;
+        bottom: -45px;
+        left: 50%;
+        transform: translateX(-50%) rotate(0deg); 
+    }
+    input::placeholder{
+        font-size:11px;
+  
+    }    
+
+}

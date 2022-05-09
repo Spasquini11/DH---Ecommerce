@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
+                  <h1>Editar producto</h1>      
+                </div>
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register-1">
+                    <form action="../<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <input type="text" placeholder="Nombre del producto" name="name" required value="<%= productToEdit.name %>"  > 
+                        <input type="text" placeholder="Descripción" name="description" required value="<%= productToEdit.description %>" >
+                        <input type="text" placeholder="Precio" name="price" required value="<%= productToEdit.price %>" >
+                        <input type="text" placeholder="Descuento" name="discount" required value="<%= productToEdit.discount %>">
+                        <input type="file" name="image1"  value="<%= productToEdit.img1 %>">                      
+                        <input type="text" placeholder="Color" name="color" value="<%= productToEdit.color %>" >
+                        <input type="text" placeholder="Talle" name="size" value="<%= productToEdit.size %>" >  
+
+
+                 <div class="subConteiner">
+
+                    
+                        <div class="register-2">
+                            <label for="id_category">Categoria</label>
+                            <select name="id_category" id="" required>
+                                <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>" <% if (productToEdit.category.id == category.id) { %><%= 'selected' %><% }; %>><%= category.name %></option>
+                                <% }); %>
+                            </select>
+                        </div>
+                        
+                        <div class="register-2">
+                            <label for="id_brand">Marca</label>
+                            <select name="id_brand" id="" required>
+                                <% brands.forEach(brand => { %>
+                                <option value="<%= brand.id %>" <% if (productToEdit.brand.id == brand.id) { %><%= 'selected' %><% }; %>><%= brand.name %></option>
+                                <% }); %>
+                            </select>
+                        </div> 
+
+                        
+                        
+                        <div class="register-2">
+                            <label for="id_type">Tipo</label>
+                            <select name="id_type" id="" required>
+                                <% types.forEach(type => { %>
+                                <option value="<%= type.id %>" <% if (productToEdit.type.id == type.id) { %><%= 'selected' %><% }; %>><%= type.name %></option>
+                                <% }); %>
+                            </select>
+                        </div>                         
+
+                       
+                        <div class="register-2">
+                            <label for="id_genre">Genero</label>
+                            <select name="id_genre" id="" required>
+                                <% genres.forEach(genre => { %>
+                                <option value="<%= genre.id %>" <% if (productToEdit.genre.id == genre.id) { %><%= 'selected' %><% }; %>><%= genre.name %></option>
+                                <% }); %>
+                            </select>
+                        </div>  
+
+                </div>
+
+                        <button type="submit" class="submit">MODIFICAR</button>
+                    </form>
+                </div>           
+        </div>
+    </div>
+</body>
+</html>

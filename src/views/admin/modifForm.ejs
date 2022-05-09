@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
+                  <h1>Editar producto</h1>      
+                </div>
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register-1">
+                    <form action="../<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <input type="text" placeholder="Nombre del producto" name="name" required value="<%= productToEdit.name %>"  > 
+                        <input type="text" placeholder="Descripción" name="description" required value="<%= productToEdit.description %>" >
+                        <input type="image" name="img1"  value="<%= productToEdit.img1 %>" >
+                        <input type="text" placeholder="Categoria" name="category" value="<%= productToEdit.category %>" >                        
+                    
+                    <input type="text" placeholder="Precio" name="price" value="<%= productToEdit.price %>" > 
+                    <input type="text" placeholder="Color" name="color" value="<%= productToEdit.color %>" >
+                    <input type="text" placeholder="Talle" name="size" value="<%= productToEdit.size %>" >
+                    <input type="text" placeholder="Genero" name="gender" value="<%= productToEdit.gender %>" >
+                   
+                    <button type="submit" class="submit">MODIFICAR</button>
+                    </form>
+                </div>           
+        </div>
+    </div>
+</body>
+</html>

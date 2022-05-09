@@ -1,0 +1,49 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx_auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="titel" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="mail" class="form-control" name="mailautofocus" placeholder="MAIL">
+                        </div> 
+                        <div class="form-group">
+                            <textarea name="description" id="" cols="30" rows="2" class="form-control"></textarea>
+                        </div>                         
+                        <div>
+                            <button class="btn btn-success btn-block">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% else %>
+            <div class="col-md-4 mx_auto">
+                <p>No existen usuarios </p>
+                <a href="/usrsList">Crear Usuario</a>
+            </div>
+    </div>
+</div>
+
+<!-- Barra de navegacio -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link disabled">Disabled</a>
+        </div>
+      </div>
+    </div>
+  </nav>

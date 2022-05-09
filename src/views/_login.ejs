@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="images/logo-dCompras-01.svg" alt="Logo dCompras"></a>       
+                </div>                               
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register">
+                <h2>Iniciar Sesión</h2>
+                    <form action="/">
+                        <input type="text" placeholder="Usuario o Mail" class="usuario"> 
+                        <input type="password" placeholder="Contraseña" class="pass">
+                        <div>                           
+                            <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                        </div>
+                        <input type="submit" class="submit" value="INGRESAR">
+                        <a href="#"> ¿Olvidaste la contraseña?</a>
+                    </form>
+            </div>
+            <div class="login">
+                <div class="login-items">
+                    <button class="fb"><i class="fab fa-facebook-f"></i>   Facebook</button>
+                    <button class="tw"><i class="fab fa-twitter"></i>   Twitter</button>
+                    <button class="gmail"><i class="fab fa-google"></i>   Gmail</button> 
+                    <a href="/register" target="_blank">  REGISTRARSE</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>       
+                </div>                               
+            </div>            
+        </div> 
+    </header>
+    <div class="banner-psc">
+        <img src="/images/carrusel3.jfif" alt="Banner">
+    </div> 
+ <main>
+   <section class="productDetails">    
+    <div class="detail-container">
+        <div class="left-col">
+          <div class="img-product">
+            <img src="/images/<%= productos.img1 %>" alt="product image">
+          </div>
+          <div class="carrousel-img" >
+            <div><img src="/images/<%= productos.img2 %>" ></div>
+            <div><img src="/images/<%= productos.img3 %>" ></div>
+            <div><img src="/images/<%= productos.img4 %>" ></div>
+          </div>
+        </div>
+        <div class="right-col">
+            <div class="reputation">
+                <a>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                </a>
+               <span> | 36 vendidos</span>
+            </div>
+             <div class="product-info">
+                 <h2 class="product-name"><%= productos.name %></h2>
+                 <div class="img-product">
+                    <img src="images/demo-product-1.jpg" />
+                </div>
+                 <h3 class="product-price">$<%= productos.price %></h3>
+                 <p class="stock">Stock disponible</p>
+             </div>
+             <div class="quantity-btn">
+                 <button class="minus">-</button>
+                 <input type="number" class="quantity-prodcut" value="1">
+                 <button class="plus">+</button>
+             </div>
+             <div class="actions">
+                 <button class="btn primary-btn">Comprar</button>
+                 <button class="btn secondary-btn">Agregar al carrito</button>
+                 <br><br>
+                 <a href="/products/edit/<%= productos.id %>" enctype="multipart/form-data" class="btn primary-btn">Editar producto</a>             
+                 <form action="/products/<%= productos.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
+				    <button type="submit" class="btn secondary-btn">Eliminar producto     </button>
+			    </form>
+             </div>
+             <div class="product-description">
+                 <p>Descripción del producto</p>
+                 <p><%= productos.description %></p>
+             </div>
+        </div>
+     </div>     
+    </section>                
+    </main>
+    <%- include('../partials/footer') %>
+    </body>
+</html>

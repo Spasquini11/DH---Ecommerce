@@ -1,0 +1,101 @@
+[
+ {
+  "id": 81,
+  "email": "scattaneo@dcompras.net",
+  "password": "$2a$10$9ZDqZXH3RzKMoRb.6XhOUOx1HZPVcudSAF3DcPVKWtDMovTyyv0O.",
+  "repassword": "123456",
+  "firstName": "Sol",
+  "lastName": "Cattaneo",
+  "image": "1646051517307_user.png"
+ },
+ {
+  "id": 61,
+  "firstName": "Christian",
+  "lastName": "Hache",
+  "email": "chache@dcompras.net",
+  "password": "$2a$10$JmU44ugWUpPO0s1kuXlzPu.6u1aunVlj1m0B4qvbjP5NjNwkRjBhm",
+  "repassword": "123456",
+  "image": "1646748542135_user.png"
+ },
+ {
+  "id": 82,
+  "firstName": "Santiago",
+  "lastName": "Pasquini",
+  "email": "spasquini@dcompras.net",
+  "password": "$2a$10$ukB5DFpZLCUz4UZJjlqA1uLc/mDIKzQDuvQoBgUvF.DYeMK/RSfOS",
+  "repassword": "$2a$10$FAjObEccmGITfLKFyji4eOHWg2IMR8SzPF8yOrz.pPfC26y8Kz2/i",
+  "image": "1646059886929_user.jpg"
+ },
+ {
+  "id": 83,
+  "firstName": "Juan",
+  "lastName": "Carrizo",
+  "email": "jcarrizo@dcompras.net",
+  "password": "$2a$10$HiZ7cG.UPT/Eexi5lAOT0OL3DVQKamz/YGK/XozpB3DqF5MfOQiCO",
+  "repassword": "dCompras1234",
+  "image": "1647532606148_user.jpg"
+ },
+ {
+  "id": 84,
+  "firstName": "Pepe",
+  "lastName": "Algormazino",
+  "email": "pep@dcompras.net",
+  "password": "$2a$10$Sq9CxgisCyXOoaDciE5dqeRmt7A57dgnZjmjnYxN3z9LvFXIFNnOC",
+  "repassword": "dCompras1234",
+  "image": "1647536284312_user.jpg"
+ },
+ {
+  "id": 85,
+  "firstName": "Usuario",
+  "lastName": "Nuevo",
+  "email": "usuario@dcompras.net",
+  "password": "$2a$10$IYsD8r5VYdk4ThEgFr8IDuAwIQomLEPLv1Q3x3sZ0mCKyM3E5gmte",
+  "repassword": "dCompras1234",
+  "image": "1647538485773_user.jpg"
+ },
+ {
+  "id": 86,
+  "firstName": "Usuario",
+  "lastName": "Nuevo",
+  "email": "usuario@dcompras.net",
+  "password": "$2a$10$YSQg77uOj41wtvaxPDnxwe/d6bd39B46q1Za8DOVCA3fKPWUATOEW",
+  "repassword": "dCompras1234",
+  "image": "1647538722499_user.jpg"
+ },
+ {
+  "id": 87,
+  "firstName": "Usuario",
+  "lastName": "Nuevo",
+  "email": "usuario@dcompras.net",
+  "password": "$2a$10$JJNviAKLcyOGS15.gW.ry.C.OJN9DdM8pa3U.qu5875V5C1I0s5IW",
+  "repassword": "dComrpas1234",
+  "image": "1647538892299_user.jpg"
+ },
+ {
+  "id": 88,
+  "firstName": "Usuario",
+  "lastName": "Nuevo",
+  "email": "usuario@dcompras.net",
+  "password": "$2a$10$lAsRtWA1hRcCOX6EZ3ur/up0LE1tF9I7oIzs7WNPHIhMK1eunZxqm",
+  "repassword": "$2a$10$LIL87rsnkkTxY60X.z7QFejUoxArRwLuBREwQ/2/UaRgvVJHNL08.",
+  "image": "1647539795445_user.jpg"
+ },
+ {
+  "id": 89,
+  "firstName": "Christian",
+  "lastName": "Hache",
+  "email": "chache@dcompras.net",
+  "password": "$2a$10$vQkSs7hAfXMaReCfR6QEqOVwxev9FIxV9eUx2rE0WW3jd5weiYMNK",
+  "repassword": "$2a$10$HvZbu4qjlzAUcrgi8ujmBODFXEl7E6ghWJrdPETaDWzrYBWUPR3ye",
+  "image": "1647548942913_user.jpg"
+ },
+ {
+  "id": 90,
+  "firstName": "Christian",
+  "lastName": "Test1",
+  "email": "ctest1@dcompras.net",
+  "password": "$2a$10$Cl9QeBEwaPLtGSwVHisSt.lwugCi/7EBKwmYuTnaJrfEewLblds1W",
+  "repassword": "$2a$10$4Sxdb3WglObHiBJqyhWvbOhv5Pinw4Y3Nt4hHtOG7AKbpMxeUNh9W",
+  "image": "1649691104148_user.png"
+ }
+]

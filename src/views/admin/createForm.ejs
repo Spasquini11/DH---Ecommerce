@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
+               
+                </div>
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <h1 class="main-title">Creación de productos</h1>      
+        <div class="login-container">
+            <div class="register-1">                                    
+                     <form action="../products" method="POST" enctype="multipart/form-data"> 
+                        <input type="text" placeholder="Nombre del producto" name="name"   > 
+                        <input type="text" placeholder="Descripción" name="description" >
+                        <input type="file" placeholder="Imagen" name="image1" >
+                        <label for="id_category">Categoría </label>
+                        <p>
+                            <select name="id_category" id="" required>
+                                <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.name %></option>
+                                <% }); %>
+                            </select>
+                        </p>                       
+                   
+                    <input type="text" placeholder="Precio" name="price" > 
+                    <input type="text" placeholder="Color" name="color" >
+                    <input type="text" placeholder="Talle" name="size" >
+                    
+                    <label for="id_genre">Genero </label>
+                    <p>
+                        <select name="id_genre" id="" required>
+                            <% genres.forEach(genre => { %>
+                            <option value="<%= genre.id %>"><%= genre.name %></option>
+                            <% }); %>
+                        </select>
+                    </p>
+                    <button type="submit" class="submit">Guardar producto</button>
+                    </form>
+            </div>    
+        </div>         
+    </div>
+</body>
+</html>

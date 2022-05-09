@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                    <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
+                 
+                  </div>                             
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register">
+                <h2>Iniciar Sesión | Login </h2>
+                    <form method="POST" action="/usrs/login">
+                        <input type="text" placeholder="Correo Electrónico" class="usuario" name="email">
+                        <br>
+                        <input type="password" placeholder="Contraseña" class="pass" name="password">
+                        <br>
+                        <% if (locals.errors && errors.email) { %>
+                            <label for="" style="color: red"><strong> <%= errors.email.msg %></strong></label>                                                      
+                        <% } %> 
+                         <br>                       
+                       <br>
+                       <p>
+                            <strong>Recordar usuario</strong><input type="checkbox" style="width: 15%" name="remember_user">      
+                        </p>
+                        <input type="submit" class="submit" value="INGRESAR">
+                        <a href="#"> ¿Olvidaste la contraseña?</a>
+                    </form>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

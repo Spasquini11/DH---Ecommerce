@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>   
+
+    <%- include('./partials/header') %>
+     
+ <main>
+   <section class="productDetails">    
+    <div class="detail-container">
+        <div class="left-col">
+          <div class="img-product">             
+            <img src="/images/<%= product.image1 %>" alt="product image">          
+          </div>
+
+        </div>
+        <div class="right-col">
+            <div class="reputation">
+                <a>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                </a>
+               <span>   36 vendidos</span>
+            </div>
+             <div class="product-info">
+                 <h2 class="product-name"><%= product.name %></h2>
+                 <div class="img-product">
+                    <img src="/images/<%= product.image1 %>" />
+                </div>
+                 <h3 class="product-price">$<%= product.price %></h3>
+                 <p class="stock">Stock disponible</p>
+             </div>
+             <div class="quantity-btn">
+                 <button class="minus">-</button>
+                 <input type="number" class="quantity-product" value="1">
+                 <button class="plus">+</button>
+             </div>
+             <div class="actions">
+                 <button class="btn primary-btn">Comprar</button>
+                 <button class="btn secondary-btn">Agregar al carrito</button>
+                 <br>
+                 <a href="/products/edit/<%= product.id %>" class="btn primary-btn">Editar producto</a> 
+                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex; justify-content: space-around">
+                    <button type="submit" class="btn delete-btn">Eliminar producto</button> 
+			    </form>
+             </div>
+             <div class="product-description">
+                 <p>Descripción del producto</p>
+                 <p><%= product.description %></p>
+             </div>
+        </div>
+     </div>     
+    </section>                
+    </main>
+    <%- include('./partials/footer') %>
+    </body>
+</html>

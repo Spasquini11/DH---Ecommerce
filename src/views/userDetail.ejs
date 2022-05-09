@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>       
+                </div>                               
+            </div>            
+        </div> 
+    </header>
+    <div class="banner-psc">
+        <img src="/images/1955-chuck-taylor-all-star-1594222823.jpg" alt="Banner">
+    </div> 
+ <main>
+     <div>
+        <h3><strong>USUARIO: <%= user.email %></strong></h3>    
+        <br>
+        <p><strong>NOMBRE  :</strong>     <%= user.first_name %> </p>
+        <p><strong>APELLIDO:</strong>     <%= user.last_name %> </p>
+        <p><strong>MAIL    :</strong>     <%= user.email %> </p>
+        <br>
+     </div>
+
+    <section>        
+        <div class="actions">
+            <a href="/usrs" class="btn primary-btn">  Listar  </a>            
+            <a href="/usrs/edit/<%= user.id %>" class="btn secondary-btn">Modificar</a> 
+            <form action="/usrs/<%= user.id %>?_method=DELETE" method="POST" enctype="multipart/form-data" style="display: inline-flex">
+               <button type="submit" class="btn delete-btn">Eliminar</button> 
+           </form>
+           <br><br>
+        </div>
+    </section>           
+    </main>
+    <%- include('./partials/footer') %>
+    </body>
+</html>

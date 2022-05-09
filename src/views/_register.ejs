@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                    <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
+                 
+                  </div>                           
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register-1">
+                <h2>Registro de usuarios - JSON</h2>
+                    <ul class="errores"></ul>
+                    <form class='form' action="/users/register" method="POST" enctype="multipart/form-data">
+						<input 
+                            type="text"
+                            placeholder="Nombre"
+                            class="nombre"
+                            name="firstName"
+                            id="firstName"
+                            value="<%= locals.oldData ? oldData.firstName : null %>"                            
+                            <% if (locals.errors && errors.firstName) { %>                               
+                                    <%= errors.firstName.msg %>                                
+                            <% } %>    
+                        >                        
+                        <input 
+                            type="text" 
+                            placeholder="Apellido"                            
+                            class="user"    
+                            name="lastName"
+                            id="lastName"                       
+                            <% if (locals.errors && errors.lastName) { %>
+                                <div>
+                                    <%= errors.lastName.msg %> 
+                                </div>
+                            <% } %>                         
+                        >
+                        <input
+                            type="email" 
+                            placeholder="Correo (*)" 
+                            class="user" 
+                            name="email"
+                            id="email"
+                            <% if (locals.errors && errors.email) { %>                                
+                                    <%= errors.email.msg %>                                 
+                            <% } %>         
+                        >
+                        <input 
+                            type="password" 
+                            placeholder="Contraseña (*)" 
+                            class="pass" 
+                            name="password"
+                            id="password"
+                            <% if (locals.errors && errors.password) { %>                                
+                                    <%= errors.password.msg %>                                 
+                            <% } %> 
+                        >   
+                        <input 
+                            type="password" 
+                            placeholder="Repetir contraseña (*)" 
+                            class="pass" 
+                            name="repassword"
+                            id="repassword"
+                            <% if (locals.errors && errors.repassword) { %>                                
+                                    <%= errors.repassword.msg %>                                
+                            <% } %> 
+                        >
+                        <input type="file" placeholder="Imagen" name="image" id="image">                        
+                        <input type="submit" class="submit" value="REGISTRARSE">                       
+                    </form>
+            </div>           
+            
+        </div>         
+    </div>
+
+    <script src="/js/validator.js"></script>
+</body>
+</html>

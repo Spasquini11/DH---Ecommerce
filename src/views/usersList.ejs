@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %> 
+        <main class="main">
+            <div class="container">                
+                    <section class="container-products">
+                        <div>    
+                            <% for (let i = 0; i < users.length; i++) { %>
+                            <a href="/usrs/<%= users[i].id %>" rel="noopener noreferrer" style="text-decoration: none;">   
+                                <article>
+                                       <div class="main-article">
+                                            <%= users[i].first_name %>
+                                            <%= users[i].last_name %>
+                                            <span>
+                                               <strong><%= users[i].email %></strong> 
+                                            </span>
+                                        </div>
+                                </article>                                                            
+                            </a>
+                            <% } %>                                
+                        </div>                               
+                    </section>
+            </div>
+        </main>
+        <%- include('./partials/footer') %>                
+    </body>
+</html>

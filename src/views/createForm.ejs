@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>     
+        <div class="main-header">
+            <div class="container-flex">
+                <div class="main-header__container"> 
+                  <a href="/"><img class="main-header__img" src="/images/logo-dCompras-01.svg" alt="Logo dCompras"></a>   
+                </div>
+            </div>            
+        </div> 
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <div class="register-1">                                    
+                     <form action="/products/create" method="POST" enctype="multipart/form-data"> 
+                        <input type="text" placeholder="Nombre del producto" name="name" id="name"   
+                        <% if (locals.errors && errors.name) { %>                               
+                            <%= errors.name.msg %>                                
+                        <% } %> 
+                        > 
+                        <input type="text" placeholder="Descripción" name="description">
+                        <input type="text" placeholder="Precio" name="price" >
+                        <input type="text" placeholder="Descuento" name="discount" >
+                        <input type="file" placeholder="Imagen" name="image1" >
+                        <input type="text" placeholder="Color" name="color" >
+                        <input type="text" placeholder="Talle" name="size" >
+
+                <div class="subConteiner">
+
+                        <div class="register-2">
+                            <label for="id_category">Categoría </label>
+                            <select name="id_category" id="" required>
+                                <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.name %></option>
+                                <% }); %>
+                            </select>
+                        </div> 
+
+                        
+                    <div class="register-2">
+                        <label for="id_genre">Género </label>
+                        <select name="id_genre" id="" required>
+                            <% genres.forEach(genre => { %>
+                            <option value="<%= genre.id %>"><%= genre.name %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+
+                        
+                        
+                    <div class="register-2">
+                            <label for="id_type">Tipo </label>
+                            <select name="id_type" id="" required>
+                            <% types.forEach(type => { %>
+                            <option value="<%= type.id %>"><%= type.name %></option>
+                            <% }); %>
+                            </select>
+                    </div>                
+                       
+                    <div class="register-2">
+                        <label for="id_brand">Marca </label>
+                        <select name="id_brand" id="" required>
+                            <% brands.forEach(brand => { %>
+                            <option value="<%= brand.id %>"><%= brand.name %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+
+                </div>
+                    <button type="submit" class="submit">Crear producto</button>
+        </form>
+
+            </div>    
+        </div>         
+    </div>
+    
+    <script src="/js/productValidator.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %> 
+
+        <div class="banner-psc">    
+            <img src="/images/1955-chuck-taylor-all-star-1594222823.jpg" alt="Banner">
+        </div> 
+   
+        <main class="main">
+            <div class="container">  
+
+                    <section class="container-products">
+                        <div class="productsale">
+                            <% for (let i =0; i < products.length; i++){ %>
+                                <% if (products[i].price <= 12000){ %>
+                                    <div class="card-product">
+                                        <a href="/products/<%= products[i].id %>" rel="noopener noreferrer">   
+                                            <article>                                     
+                                                 <img src="/images/<%= products[i].image1 %>" alt="Zapatillas" >
+                                                    <div class="main-article">
+                                                        <i class="fas fa-truck"></i>
+                                                        <p class="price">$ <%= products[i].price %></p>
+                                                        <p class="discount"> <%= products[i].discount %> %</p>
+                                                        <h4 class="name"> <%= products[i].name %></h4>
+                                                    </div>
+                                                </article>  
+                                            </a>
+                                        <a href="/detail" rel="noopener noreferrer">    
+                                        <i class="product__icon fas fa-cart-plus"></i>
+                                        </a>
+                                       </div>
+                                <% } %>                            
+                            <% } %>                                
+                        </div>                               
+                    </section>
+            </div>
+        </main>
+        <%- include('./partials/footer') %>                
+    </body>
+</html>

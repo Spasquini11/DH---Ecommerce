@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %> 
+    <h2 class="main-nav">Usuarios</h2>
+        <main class="main">
+            <div class="container">                
+                    <section class="container-products">
+                        <div>  
+                            <h2>Hi <%= user.firstName %> </h2>
+				            <img src="/images/users/<%= user.image %> ">
+				            <br>
+                            <div><%= user.lastName %> </div>
+				            <br>
+				            <div><%= user.email %> </div>
+                        </div>                               
+                    </section>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>                
+    </body>
+</html>

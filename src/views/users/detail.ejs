@@ -1,0 +1,18 @@
+<body>
+<h2>Esta es la pagina de detalle de usuarios </h2>
+
+    <div class="user">
+    <article>
+            <p class="name"> <%= user.first_name %></p>
+            <p class="lastName"><%= user.last_name %></p>
+            <h4 class="email"> <%= user.email %></h4>
+     </article> 
+     <br>
+    <section>
+        <a class="botonAgregar" href="/users/create">Agregar Usuario</a>
+        <a class="botonVolver" href="/users">Listado de Usuarios</a>
+        <a class="botonModificar" href="/users/edit/<%= user.id %>">Modificar Usuario</a>        
+    </section>                                
+   
+    </div>
+</body>
